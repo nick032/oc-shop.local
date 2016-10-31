@@ -24,9 +24,31 @@
                 <h3 class="panel-title"><i class="fa fa-pencil"></i> <?php echo $text_edit; ?></h3>
             </div>
             <div class="panel-body">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur dicta dolore doloremque eius eum hic id impedit in ipsa, iure modi nesciunt quam repellendus sint sit vero voluptas voluptatum?
+                <input type="file" name="file">
+                <button class="btn btn-primary load">Загрузить</button>
+
             </div>
         </div>
     </div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var files;
+
+        $('input[type=file]').change(function() {
+            files = this.files;
+        });
+
+
+
+        $('.load').click(function(e){
+            e.preventDefault();
+            var data = new FormData();
+            $.each( files, function( key, value ){
+                data.append( key, value );
+            });
+            console.log(data);
+        });
+    });
+</script>
 </div>
 <?php echo $footer; ?>
