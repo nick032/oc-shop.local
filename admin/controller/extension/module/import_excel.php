@@ -20,6 +20,9 @@ class ControllerExtensionModuleImportExcel extends Controller{
             'href' => $this->url->link('extension/extension', 'token=' . $this->session->data['token'], true)
         ];
 
+        $data['token'] = 'token=' . $this->session->data['token'];
+        $data['ajax_action'] = $this->url->link('import_excel/import/add');
+
         $data['header'] = $this->load->controller('common/header');
         $data['column_left'] = $this->load->controller('common/column_left');
         $data['footer'] = $this->load->controller('common/footer');

@@ -49,3 +49,46 @@
 2016-10-31 20:06:22 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
 2016-10-31 20:06:22 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
 2016-10-31 20:06:22 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 18:52:05 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 18:52:05 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 18:52:05 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:00:16 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:00:16 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:00:16 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:01:28 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:01:28 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:01:28 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:03:46 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:03:46 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:03:46 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:06:27 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:06:27 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:06:27 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:07:31 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:07:31 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:07:31 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:16:51 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:16:51 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:16:51 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:17:16 - PHP Notice:  Undefined index: tmp_name in /home/ninja/www/opencart.local/admin/controller/import_excel/import.php on line 4
+2016-11-02 19:17:27 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:17:27 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:17:27 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:17:31 - PHP Notice:  Undefined index: name in /home/ninja/www/opencart.local/admin/controller/import_excel/import.php on line 4
+2016-11-02 19:17:43 - PHP Notice:  Undefined index: name in /home/ninja/www/opencart.local/admin/controller/import_excel/import.php on line 5
+2016-11-02 19:19:56 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:19:56 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:19:56 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:20:32 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:20:32 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:20:32 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:20:53 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:20:53 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:20:53 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:26:01 - PHP Notice:  Undefined variable: button_save in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 6
+2016-11-02 19:26:01 - PHP Notice:  Undefined variable: cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:26:01 - PHP Notice:  Undefined variable: button_cancel in /home/ninja/www/opencart.local/admin/view/template/extension/module/import_excel.tpl on line 7
+2016-11-02 19:28:46 - PHP Notice:  Use of undefined constant APP - assumed 'APP' in /home/ninja/www/opencart.local/admin/controller/import_excel/import.php on line 7
+2016-11-02 19:34:52 - PHP Warning:  move_uploaded_file() expects exactly 2 parameters, 1 given in /home/ninja/www/opencart.local/admin/controller/import_excel/import.php on line 6
+2016-11-02 19:35:05 - PHP Warning:  move_uploaded_file(/home/ninja/www/opencart.local/admin/controller/import_excel/uploads/php.ini): failed to open stream: Permission denied in /home/ninja/www/opencart.local/admin/controller/import_excel/import.php on line 6
+2016-11-02 19:35:05 - PHP Warning:  move_uploaded_file(): Unable to move '/opt/lampp/temp/phpTW11F9' to '/home/ninja/www/opencart.local/admin/controller/import_excel/uploads/php.ini' in /home/ninja/www/opencart.local/admin/controller/import_excel/import.php on line 6

@@ -26,27 +26,42 @@
             <div class="panel-body">
                 <input type="file" name="file">
                 <button class="btn btn-primary load">Загрузить</button>
-
+                <div class="test"></div>
             </div>
         </div>
     </div>
 <script type="text/javascript">
+
     $(document).ready(function(){
         var files;
-
         $('input[type=file]').change(function() {
             files = this.files;
         });
 
 
-
         $('.load').click(function(e){
             e.preventDefault();
+
             var data = new FormData();
             $.each( files, function( key, value ){
                 data.append( key, value );
             });
-            console.log(data);
+
+
+            $.ajax({
+                type: 'POST',
+                data: data,
+                url: '<?=$ajax_action?>' + '&' + '<?=$token?>',
+                /*dataType: 'json',*/
+                processData: false,
+                contentType: false,
+                success: function(res){
+                    $('.test').html(res);
+                },
+                error: function(jqXHR, testStatus, errorThrow){
+                    console.log('Ошибка AJAX запроса: ' + testStatus);
+                }
+            });
         });
     });
 </script>
