@@ -6,6 +6,7 @@ class ControllerImportExcelImport extends Controller {
         if(move_uploaded_file($_FILES[0]['tmp_name'], $file)){
             echo 'Файл загружен';
         }
+        unlink($file);
         //echo '<pre>' . $file . '</pre>';
         exit;
     }
