@@ -1,5 +1,5 @@
 .idea
 config.php
-admin/config.php
+.admin/config.php
 ./system/storage/cache
 admin/config.php
