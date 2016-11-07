@@ -27,12 +27,19 @@
                 <input type="file" name="file">
                 <button class="btn btn-primary load">Загрузить</button>
                 <div class="test"></div>
+                <div class="preloader"></div>
             </div>
         </div>
     </div>
 <script type="text/javascript">
 
     $(document).ready(function(){
+
+        $(document).on('click', '.select-field', function(){
+            var attr = $(this).attr('name');
+            alert(attr);
+        })
+
         var files;
         $('input[type=file]').change(function() {
             files = this.files;
@@ -41,7 +48,7 @@
 
         $('.load').click(function(e){
             e.preventDefault();
-
+            $this = $(this);
             var data = new FormData();
             $.each( files, function( key, value ){
                 data.append( key, value );
@@ -55,7 +62,13 @@
                 /*dataType: 'json',*/
                 processData: false,
                 contentType: false,
+                beforeSend: function(){
+                    $this.fadeOut();
+                    $('.preloader').html('Идет загрузка...');
+                },
                 success: function(res){
+                    $('.preloader').html('');
+                    $this.fadeIn();
                     $('.test').html(res);
                 },
                 error: function(jqXHR, testStatus, errorThrow){
@@ -63,7 +76,13 @@
                 }
             });
         });
+
+
+
+
     });
+
+
 </script>
 </div>
 <?php echo $footer; ?>
