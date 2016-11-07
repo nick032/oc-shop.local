@@ -3,6 +3,8 @@ require_once('Classes/PHPExcel.php');
 class ControllerImportExcelImport extends Controller {
     private $file = '';
     public function add(){
+        $this->load->model('import_excel/import');
+        $test = $this->model_import_excel_import->getProductNames();
         $uploads = DIR_APPLICATION . 'controller/import_excel/uploads/';
         $this->file =  $uploads . $_FILES[0]['name'];
         if(move_uploaded_file($_FILES[0]['tmp_name'], $this->file)){
@@ -91,10 +93,11 @@ class ControllerImportExcelImport extends Controller {
                         }
 
                         $content .= '<td class="t1"><select class="select-field" name="cell_'. $i .'">';
-                        $content .= '<option value="1">Занчение 1</option>';
-                        $content .= '<option value="2">Занчение 2</option>';
-                        $content .= '<option value="3">Занчение 3</option>';
-                        $content .= '<option value="4">Занчение 4</option>';
+                        $content .= '<option value="1">Имя продукта</option>';
+                        $content .= '<option value="2">Имя категории</option>';
+                        $content .= '<option value="3">Количество</option>';
+                        $content .= '<option value="4">Цена</option>';
+                        $content .= '<option value="5">Картинка</option>';
                         $content .= '</select></td>';
                     }
                 }

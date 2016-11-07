@@ -37,7 +37,7 @@
 
         $(document).on('click', '.select-field', function(){
             var attr = $(this).attr('name');
-            alert(attr);
+
         })
 
         var files;
