@@ -37,15 +37,11 @@
 
         $(document).on('click', '.select-field', function(){
             var attr = $(this).attr('name');
-
-        })
-
+        });
         var files;
         $('input[type=file]').change(function() {
             files = this.files;
         });
-
-
         $('.load').click(function(e){
             e.preventDefault();
             $this = $(this);
@@ -53,8 +49,6 @@
             $.each( files, function( key, value ){
                 data.append( key, value );
             });
-
-
             $.ajax({
                 type: 'POST',
                 data: data,
@@ -76,13 +70,7 @@
                 }
             });
         });
-
-
-
-
     });
-
-
 </script>
 </div>
 <?php echo $footer; ?>
