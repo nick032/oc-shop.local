@@ -41,7 +41,6 @@ class ControllerImportExcelImport extends Controller {
             $data = [];
 
             foreach($rowIterator as $row) {
-
                 if($row->getRowIndex() != 0) {
                     $cellIterator = $row->getCellIterator();
                     foreach($cellIterator as $cell) {
@@ -51,7 +50,6 @@ class ControllerImportExcelImport extends Controller {
                         }
                         $data['body'][$row->getRowIndex()][] = $cell->getValue();
                         //echo "<br>". $cell->getColumn() . ' - ' . $cell->getValue();
-
                         //$cellPath = $cell->getColumn();
                         /*if(isset($cells[$cellPath])) {
                             if(in_array($cellPath, $img_addr)) {
@@ -62,14 +60,11 @@ class ControllerImportExcelImport extends Controller {
                                 $data[$row->getRowIndex()][$cells[$cellPath]] = trim($cell->getCalculatedValue());
                             }
                         }*/
-
                     }
                 }
-
             }
             return $data;
         }catch (ErrorException $e){}
-
         //return $data;
     }
 
@@ -92,7 +87,8 @@ class ControllerImportExcelImport extends Controller {
                             continue;
                         }
 
-                        $content .= '<td class="t1"><select class="select-field" name="cell_'. $i .'">';
+                        $content .= '<td class="t1"><select class="select-field" name="cell[]">';
+                        $content .= '<option value="">--Не выбрано--</option>';
                         $content .= '<option value="1">Имя продукта</option>';
                         $content .= '<option value="2">Имя категории</option>';
                         $content .= '<option value="3">Количество</option>';
@@ -101,8 +97,6 @@ class ControllerImportExcelImport extends Controller {
                         $content .= '</select></td>';
                     }
                 }
-
-
                 $content .= '</tr>';
                 $content .= '</thead>';
             }else{
@@ -110,7 +104,7 @@ class ControllerImportExcelImport extends Controller {
                 foreach ($row as $row_index => $row_data) {
                     $content .= '<tr><td>' . ($row_index - 1) . '</td>';
                     foreach ($row_data as $data) {
-                        $content .= '<td>' . $data . '</td>';
+                        $content .= '<td><input type="text" name="row_'. $row_index .'[]" value="' . $data . '"></td>';
                     }
                     $content .= '</tr>';
                 }
