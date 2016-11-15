@@ -89,11 +89,11 @@ class ControllerImportExcelImport extends Controller {
 
                         $content .= '<td class="t1"><select class="select-field" name="cell[]">';
                         $content .= '<option value="">--Не выбрано--</option>';
-                        $content .= '<option value="1">Имя продукта</option>';
-                        $content .= '<option value="2">Имя категории</option>';
-                        $content .= '<option value="3">Количество</option>';
-                        $content .= '<option value="4">Цена</option>';
-                        $content .= '<option value="5">Картинка</option>';
+                        $content .= '<option value="product_name">Имя продукта</option>';
+                        $content .= '<option value="category_name">Имя категории</option>';
+                        $content .= '<option value="quantity">Количество</option>';
+                        $content .= '<option value="price">Цена</option>';
+                        $content .= '<option value="picture">Картинка</option>';
                         $content .= '</select></td>';
                     }
                 }

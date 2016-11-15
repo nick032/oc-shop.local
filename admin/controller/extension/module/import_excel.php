@@ -8,7 +8,8 @@ class ControllerExtensionModuleImportExcel extends Controller{
         $this->document->addStyle('view/stylesheet/import_excel.css');
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
-            print_r($_POST);
+            $products = $this->buildDataArray($this->request->post);
+            print_r($products);
         }
 
         $data['heading_title'] = $this->language->get('heading_title');
@@ -43,5 +44,20 @@ class ControllerExtensionModuleImportExcel extends Controller{
         }
 
         return !$this->error;
+    }
+
+    protected function buildDataArray(array $data){
+        $hName = $data['cell'];
+        $products = [];
+        foreach ($data as $row_key => $rows){
+            if($row_key == 'cell') continue;
+            foreach ($rows as $key => $row) {
+                if(!empty($hName[$key])){
+                    $products[][$hName[$key]] = $row;
+                }
+            }
+
+        }
+        return $products;
     }
 }
