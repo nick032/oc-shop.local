@@ -6,10 +6,15 @@ class ControllerExtensionModuleImportExcel extends Controller{
         $this->load->language('extension/module/import_excel');
         $this->document->setTitle($this->language->get('heading_title'));
         $this->document->addStyle('view/stylesheet/import_excel.css');
+        $this->load->model('import_excel/import');
 
         if (($this->request->server['REQUEST_METHOD'] == 'POST') && $this->validate()) {
             $products = $this->buildDataArray($this->request->post);
-            print_r($products);
+            if(empty($products)){
+                $data['error_warning'] = 'Ошибка записи';
+            }else {
+                $data['excel_msg'] = $this->model_import_excel_import->writeProductFromExcel($products);
+            }
         }
 
         $data['heading_title'] = $this->language->get('heading_title');
@@ -49,14 +54,15 @@ class ControllerExtensionModuleImportExcel extends Controller{
     protected function buildDataArray(array $data){
         $hName = $data['cell'];
         $products = [];
+        $count = 0;
         foreach ($data as $row_key => $rows){
             if($row_key == 'cell') continue;
             foreach ($rows as $key => $row) {
                 if(!empty($hName[$key])){
-                    $products[][$hName[$key]] = $row;
+                    $products[$count][$hName[$key]] = $row;
                 }
             }
-
+            $count++;
         }
         return $products;
     }

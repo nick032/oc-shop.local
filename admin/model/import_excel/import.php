@@ -4,4 +4,9 @@ class ModelImportExcelImport extends Model {
         $result = $this->db->query('SELECT * FROM oc_product LIMIT 2');
         return $result->rows;
     }
+
+    public function writeProductFromExcel(array $data){
+        print_r($data);
+        return "Данные записаны";
+    }
 }

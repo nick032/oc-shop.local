@@ -92,8 +92,12 @@ class ControllerImportExcelImport extends Controller {
                         $content .= '<option value="product_name">Имя продукта</option>';
                         $content .= '<option value="category_name">Имя категории</option>';
                         $content .= '<option value="quantity">Количество</option>';
+                        $content .= '<option value="brend">Бренд</option>';
+                        $content .= '<option value="ean">Штрихкод</option>';
                         $content .= '<option value="price">Цена</option>';
-                        $content .= '<option value="picture">Картинка</option>';
+                        $content .= '<option value="picture_1">Картинка-1</option>';
+                        $content .= '<option value="picture_2">Картинка-2</option>';
+                        $content .= '<option value="picture_3">Картинка-3</option>';
                         $content .= '</select></td>';
                     }
                 }
