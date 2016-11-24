@@ -14,27 +14,39 @@
         </div>
     </div>
     <div class="container-fluid">
-        <?php if (isset($error_warning)) { ?>
-        <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error_warning; ?>
+        <?php if (isset($errors)) { ?>
+        <?php foreach($errors as $key => $value) { ?>
+        <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo  $value ?>
             <button type="button" class="close" data-dismiss="alert">&times;</button>
         </div>
         <?php } ?>
-        <?php if(isset($excel_msg)) { ?>
-        <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $excel_msg; ?>
+        <?php } ?>
+        <?php if (isset($error)) { ?>
+        <div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> <?php echo $error?>
             <button type="button" class="close" data-dismiss="alert">&times;</button>
         </div>
         <?php } ?>
+        <?php if(isset($success)){ ?>
+        <div class="alert alert-success">
+            <i class="fa fa-check-circle"></i> <?php echo $success; ?>   <button type="button" class="close" data-dismiss="alert">×</button>
+        </div>
+        <?php } ?>
+
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h3 class="panel-title"><i class="fa fa-pencil"></i> <?php echo $text_edit; ?></h3>
             </div>
             <div class="panel-body">
-                <input type="file" name="file">
-                <button class="btn btn-primary load">Загрузить</button>
-                <div class="preloader"></div>
-                <form action="<?php echo $action ?>" method="post" id="form-excel">
-                    <div class="test"></div>
-                </form>
+                <?php if(!empty($products)) { ?>
+                <?php print_r($products); ?>
+                <?php }else { ?>
+                    <input type="file" name="file">
+                    <button class="btn btn-primary load">Загрузить</button>
+                    <div class="preloader"></div>
+                    <form action="<?php echo $action ?>" method="post" id="form-excel">
+                        <div class="result-table"></div>
+                    </form>
+                <?php } ?>
             </div>
         </div>
     </div>
@@ -44,23 +56,22 @@
         var prev = '';
         $(document).on('focus', '.select-field', function(){
             prev = $(this).val();
-            //console.log(prev);
         }).on('change', '.select-field', function(){
+            var dataCount = $(this).data('count');
             var val = $(this).val();
-            var mName = $(this).attr('name');
-            console.log(mName);
             $.each($('.select-field'), function(key, value){
-                var name = 'cell_' + (key + 1);
-                if((mName != name) && val != ''){
-                    $(this).children('option[value='+val+']').fadeOut();
-                    if(prev != ''){
-                        $(this).children('option[value='+prev+']').fadeIn();
+                var count = key + 1;
+                if(dataCount != count){
+                    //console.log('key - ' + key + ';  Data count - ' + dataCount + ';  Count - ' + count + ';  Value - ' + val );
+                    if(val != '') {
+                        $(this).children('option[value=' + val + ']').fadeOut(1);
+                    }
+                    if(prev != '') {
+                        $(this).children('option[value=' + prev + ']').fadeIn(1);
                     }
                 }
-                if( val == '') {
-                    $(this).children('option[value='+prev+']').fadeIn();
-                }
             });
+            prev = val;
         });
 
         var files;
@@ -88,7 +99,7 @@
                 success: function(res){
                     $('.preloader').html('');
                     $this.fadeIn();
-                    $('.test').html(res);
+                    $('.result-table').html(res);
                 },
                 error: function(jqXHR, testStatus, errorThrow){
                     console.log('Ошибка AJAX запроса: ' + testStatus);
